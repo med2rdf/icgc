@@ -55,7 +55,7 @@ linked-icgc
     $ cd $HOME
     $ git clone https://github.com/ryotas/sparql-gateway.git
     $ cd ~/sparql-gateway
-    $ npm install request fs config js-yaml
+    $ npm install request fs config
     # Set the host ip of the server
     $ cd ~/linked-icgc_22
     $ vi config/default.json
