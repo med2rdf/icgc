@@ -382,10 +382,10 @@ map:ssm_mutation_reference_genome_allele a d2rq:PropertyBridge;
    d2rq:property vocab:reference_genome_allele .
 
 map:database a d2rq:Database;
-   d2rq:jdbcDSN "jdbc:mysql://localhost/linked_icgc_20";
+   d2rq:jdbcDSN "jdbc:mysql://localhost/linked_icgc";
    d2rq:jdbcDriver "com.mysql.jdbc.Driver";
    d2rq:password "p";
-   d2rq:username "linked_icgc_20" .
+   d2rq:username "linked_icgc" .
 
 map:project a d2rq:ClassMap;
    d2rq:class <Project>;

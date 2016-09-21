@@ -11,8 +11,8 @@
 date
 
 echo -e "\n\nLoading all ICGC data..."
-time ~/virtuoso.sh loaddir ~/data license.nt http://icgc.link/release_20
-time ~/virtuoso.sh loaddir ~/data/linked-icgc_20 ICGC*.nt http://icgc.link/release_20
+time ~/virtuoso.sh loaddir http://icgc.link/release_22 ~/data/ license.nt
+time ~/virtuoso.sh loaddir http://icgc.link/release_22 ~/data/linked-icgc_22/ ICGC*.nt
 
 date
 

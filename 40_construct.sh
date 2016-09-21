@@ -6,5 +6,5 @@ echo -e "\n\nExporting x-gene.nt..."
 node ~/sparql-gateway/client.js ./construct/gene.sql ~/data/x-gene.nt
 echo -e "\n\nCounting lines of x-gene.nt..."
 wc -l ~/data/x-gene.nt
-#echo -e "\n\nLoading cross references for genes..."
-#time ~/virtuoso.sh loaddir ~/data x-gene.nt http://icgc.link/release_20
+echo -e "\n\nLoading cross references for genes..."
+time ~/virtuoso.sh loaddir http://icgc.link/release_22 ~/data x-gene.nt

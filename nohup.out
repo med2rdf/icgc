@@ -1,0 +1,2080 @@
+20_convert.sh: 6 行: [: 引数が多すぎます
+cat: donor.tsv: そのようなファイルやディレクトリはありません
+cat: specimen.tsv: そのようなファイルやディレクトリはありません
+cat: sample.tsv: そのようなファイルやディレクトリはありません
+cat: ssm.tsv: そのようなファイルやディレクトリはありません
+/home/ec2-user/linked-icgc_22/input/code
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm_mutation
+COUNT(*)
+0
+
+-- ssm_detection
+COUNT(*)
+0
+
+-- ssm_effect
+COUNT(*)
+0
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/BRCA-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+1099
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+2298
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+15380
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+628613
+
+-- ssm_mutation
+COUNT(*)
+82680
+
+-- ssm_detection
+COUNT(*)
+84948
+
+-- ssm_effect
+COUNT(*)
+591162
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/GBM-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+596
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1154
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+11869
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+131857
+
+-- ssm_mutation
+COUNT(*)
+19852
+
+-- ssm_detection
+COUNT(*)
+20361
+
+-- ssm_effect
+COUNT(*)
+128407
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/OV-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+586
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1193
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+14809
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+41305
+
+-- ssm_mutation
+COUNT(*)
+6370
+
+-- ssm_detection
+COUNT(*)
+6384
+
+-- ssm_effect
+COUNT(*)
+41067
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/BRCA-EU
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+569
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1140
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+1145
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+12487266
+
+-- ssm_mutation
+COUNT(*)
+3815462
+
+-- ssm_detection
+COUNT(*)
+3851143
+
+-- ssm_effect
+COUNT(*)
+12365523
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/CLLE-ES
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+549
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1334
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+1347
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1065358
+
+-- ssm_mutation
+COUNT(*)
+360186
+
+-- ssm_detection
+COUNT(*)
+364753
+
+-- ssm_effect
+COUNT(*)
+1045541
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/KIRC-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+537
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1101
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+9110
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+194973
+
+-- ssm_mutation
+COUNT(*)
+26371
+
+-- ssm_detection
+COUNT(*)
+27219
+
+-- ssm_effect
+COUNT(*)
+189412
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/UCEC-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+548
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1117
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+7641
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1263854
+
+-- ssm_mutation
+COUNT(*)
+179214
+
+-- ssm_detection
+COUNT(*)
+184704
+
+-- ssm_effect
+COUNT(*)
+1227308
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/THCA-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+507
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1053
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+5876
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+51985
+
+-- ssm_mutation
+COUNT(*)
+6659
+
+-- ssm_detection
+COUNT(*)
+6986
+
+-- ssm_effect
+COUNT(*)
+47745
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+cat: ssm.tsv: そのようなファイルやディレクトリはありません
+/home/ec2-user/linked-icgc_22/input/HNSC-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+528
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1123
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+6053
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm_mutation
+COUNT(*)
+0
+
+-- ssm_detection
+COUNT(*)
+0
+
+-- ssm_effect
+COUNT(*)
+0
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+cat: ssm.tsv: そのようなファイルやディレクトリはありません
+/home/ec2-user/linked-icgc_22/input/LUAD-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+522
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1175
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+7089
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm_mutation
+COUNT(*)
+0
+
+-- ssm_detection
+COUNT(*)
+0
+
+-- ssm_effect
+COUNT(*)
+0
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/COAD-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+459
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+987
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+8508
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+796781
+
+-- ssm_mutation
+COUNT(*)
+105786
+
+-- ssm_detection
+COUNT(*)
+113791
+
+-- ssm_effect
+COUNT(*)
+738650
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/NBL-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+606
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1136
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+1536
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1933
+
+-- ssm_mutation
+COUNT(*)
+224
+
+-- ssm_detection
+COUNT(*)
+304
+
+-- ssm_effect
+COUNT(*)
+1460
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/STAD-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+443
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+940
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+5437
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1049822
+
+-- ssm_mutation
+COUNT(*)
+142496
+
+-- ssm_detection
+COUNT(*)
+147515
+
+-- ssm_effect
+COUNT(*)
+1006890
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/LGG-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+515
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1048
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+5810
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+96215
+
+-- ssm_mutation
+COUNT(*)
+13197
+
+-- ssm_detection
+COUNT(*)
+14326
+
+-- ssm_effect
+COUNT(*)
+87512
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/SKCM-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+471
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+948
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+5101
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1661937
+
+-- ssm_mutation
+COUNT(*)
+235819
+
+-- ssm_detection
+COUNT(*)
+252276
+
+-- ssm_effect
+COUNT(*)
+1436916
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/LUSC-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+504
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1083
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+7714
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+415746
+
+-- ssm_mutation
+COUNT(*)
+65063
+
+-- ssm_detection
+COUNT(*)
+65303
+
+-- ssm_effect
+COUNT(*)
+413841
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/PACA-AU
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+461
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1657
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+1657
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+4050424
+
+-- ssm_mutation
+COUNT(*)
+1240676
+
+-- ssm_detection
+COUNT(*)
+1346787
+
+-- ssm_effect
+COUNT(*)
+3729381
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/PBCA-DE
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+457
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+876
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+876
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+2087345
+
+-- ssm_mutation
+COUNT(*)
+544998
+
+-- ssm_detection
+COUNT(*)
+669483
+
+-- ssm_effect
+COUNT(*)
+1704096
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/PRAD-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+500
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+1063
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+5365
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+130227
+
+-- ssm_mutation
+COUNT(*)
+15861
+
+-- ssm_detection
+COUNT(*)
+16886
+
+-- ssm_effect
+COUNT(*)
+108197
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/LIHC-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+377
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+796
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+3996
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+182196
+
+-- ssm_mutation
+COUNT(*)
+26543
+
+-- ssm_detection
+COUNT(*)
+26599
+
+-- ssm_effect
+COUNT(*)
+181557
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/PACA-CA
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+308
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+655
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+688
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+5828815
+
+-- ssm_mutation
+COUNT(*)
+1733621
+
+-- ssm_detection
+COUNT(*)
+1929272
+
+-- ssm_effect
+COUNT(*)
+5218380
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/BLCA-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+412
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+845
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+4421
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+279320
+
+-- ssm_mutation
+COUNT(*)
+38160
+
+-- ssm_detection
+COUNT(*)
+38413
+
+-- ssm_effect
+COUNT(*)
+277718
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/LICA-FR
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+307
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+619
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+619
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1240006
+
+-- ssm_mutation
+COUNT(*)
+369001
+
+-- ssm_detection
+COUNT(*)
+382395
+
+-- ssm_effect
+COUNT(*)
+1199643
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/CESC-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+308
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+621
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+3236
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+342416
+
+-- ssm_mutation
+COUNT(*)
+45472
+
+-- ssm_detection
+COUNT(*)
+45859
+
+-- ssm_effect
+COUNT(*)
+335333
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/LIRI-JP
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+260
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+741
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+988
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+8562785
+
+-- ssm_mutation
+COUNT(*)
+2758033
+
+-- ssm_detection
+COUNT(*)
+2850679
+
+-- ssm_effect
+COUNT(*)
+8286432
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/LINC-JP
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+244
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+488
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+488
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+1680709
+
+-- ssm_mutation
+COUNT(*)
+437403
+
+-- ssm_detection
+COUNT(*)
+443993
+
+-- ssm_effect
+COUNT(*)
+1640575
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/BTCA-JP
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+239
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+478
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+478
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+503722
+
+-- ssm_mutation
+COUNT(*)
+66751
+
+-- ssm_detection
+COUNT(*)
+68834
+
+-- ssm_effect
+COUNT(*)
+489173
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/ESCA-CN
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+468
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+936
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+936
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+214771
+
+-- ssm_mutation
+COUNT(*)
+31074
+
+-- ssm_detection
+COUNT(*)
+31487
+
+-- ssm_effect
+COUNT(*)
+211256
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/KIRP-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+291
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+614
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+3586
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+110566
+
+-- ssm_mutation
+COUNT(*)
+13219
+
+-- ssm_detection
+COUNT(*)
+13588
+
+-- ssm_effect
+COUNT(*)
+96728
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/ALL-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+1002
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+2198
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+2818
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+11660
+
+-- ssm_mutation
+COUNT(*)
+1327
+
+-- ssm_detection
+COUNT(*)
+1411
+
+-- ssm_effect
+COUNT(*)
+9079
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+/home/ec2-user/linked-icgc_22/input/ESAD-UK
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+203
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+416
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+416
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+14931773
+
+-- ssm_mutation
+COUNT(*)
+5004629
+
+-- ssm_detection
+COUNT(*)
+5288939
+
+-- ssm_effect
+COUNT(*)
+13357836
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=18) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=39) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+cat: ssm.tsv: そのようなファイルやディレクトリはありません
+/home/ec2-user/linked-icgc_22/input/LAML-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+200
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm_mutation
+COUNT(*)
+0
+
+-- ssm_detection
+COUNT(*)
+0
+ERROR 1030 (HY000) at line 3: Got error 28 from storage engine
+
+-- ssm_effect
+ERROR 1114 (HY000) at line 1: The table 'project' is full
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=31) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=2) 警告: 標準出力への書込みエラー (デバイスに空き領域がありません)
+awk: (FILENAME=- FNR=16) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=43) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=7) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/COCA-CN
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm_mutation
+COUNT(*)
+0
+ERROR 1030 (HY000) at line 3: Got error 28 from storage engine
+
+-- ssm_detection
+
+-- ssm_effect
+COUNT(*)
+0
+ERROR 3 (HY000) at line 1: Error writing file './linked_icgc/#sql-cc4_283.frm' (Errcode: 28)
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=29) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm_mutation
+COUNT(*)
+0
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_detection.frm' (Errcode: 28)
+
+-- ssm_detection
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_effect.frm' (Errcode: 28)
+
+-- ssm_effect
+ERROR 3 (HY000) at line 1: Error writing file './linked_icgc/#sql-cc4_293.frm' (Errcode: 28)
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=86) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=39) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=8) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/READ-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+171
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+68
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+ERROR 1030 (HY000) at line 3: Got error 28 from storage engine
+
+-- ssm_mutation
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_detection.frm' (Errcode: 28)
+
+-- ssm_detection
+ERROR 1030 (HY000) at line 3: Got error 28 from storage engine
+
+-- ssm_effect
+ERROR 1114 (HY000) at line 1: The table 'project' is full
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=46) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=2) 警告: 標準出力への書込みエラー (デバイスに空き領域がありません)
+awk: (FILENAME=- FNR=16) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=54) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=7) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/LICA-CN
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_mutation.frm' (Errcode: 28)
+
+-- ssm_mutation
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_detection.frm' (Errcode: 28)
+
+-- ssm_detection
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_effect.frm' (Errcode: 28)
+
+-- ssm_effect
+ERROR 3 (HY000) at line 1: Error writing file './linked_icgc/#sql-cc4_2b3.frm' (Errcode: 28)
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=32) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=2) 警告: 標準出力への書込みエラー (デバイスに空き領域がありません)
+awk: (FILENAME=- FNR=13) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=37) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=7) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/AML-US
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- ssm
+COUNT(*)
+0
+COUNT(*)
+0
+ERROR 3 (HY000) at line 3: Error writing file './linked_icgc/ssm_mutation.frm' (Errcode: 28)
+
+-- ssm_mutation
+ERROR 3 (HERROR 3 (HY000) at line 2: Error writing file './linked_icgc/ssm.frm' (Errcode: 28)
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_mutation
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_detection
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_effect
+ERROR 1114 (HY000) at line 1: The table 'project' is full
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=7) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/PAEN-IT
+ERROR 3 (HY000) at line 2: Error writing file './linked_icgc/ssm.frm' (Errcode: 28)
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+1
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+37
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+74
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+74
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_mutation
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_detection
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_effect
+ERROR 3 (HY000) at line 1: Error writing file './linked_icgc/#sql-cc4_423.frm' (Errcode: 28)
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=30) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=2) 警告: 標準出力への書込みエラー (デバイスに空き領域がありません)
+awk: (FILENAME=- FNR=14) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=47) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=9) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/BRCA-KR
+ERROR 3 (HY000) at line 2: Error writing file './linked_icgc/ssm.frm' (Errcode: 28)
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_mutation
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_detection
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn't exist
+
+-- ssm_effect
+ERROR 3 (HY000) at line 1: Error writing file './linked_icgc/#sql-cc4_433.frm' (Errcode: 28)
+
+-- D2RQ is exporting triples from MySQL database.
+
+Done.
+
+20_convert.sh: 6 行: [: 引数が多すぎます
+awk: (FILENAME=- FNR=31) 警告: 標準出力への書込みエラー (デバイスに空き領域がありません)
+awk: (FILENAME=- FNR=2) 警告: 標準出力への書込みエラー (デバイスに空き領域がありません)
+awk: (FILENAME=- FNR=17) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=55) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+awk: (FILENAME=- FNR=7) 致命的: print から "標準出力" へ出力できません (デバイスに空き領域がありません)。
+/home/ec2-user/linked-icgc_22/input/LIAD-FR
+ERROR 3 (HY000) at line 2: Error writing file './linked_icgc/ssm.frm' (Errcode: 28)
+
+-- project
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- donor
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- specimen
+COUNT(*)
+0
+COUNT(*)
+0
+
+-- sample
+COUNT(*)
+0
+COUNT(*)
+0
+ERROR 1146 (42S02) at line 3: Table 'linked_icgc.ssm' doesn2016年  9月 21日 水曜日 01:30:49 UTC
+
+
+Loading all ICGC data...
+Connected to OpenLink Virtuoso
+Driver: 07.20.3217 OpenLink Virtuoso ODBC Driver
+OpenLink Interactive SQL (Virtuoso), version 0.9849b.
+Type HELP; for help and EXIT; to exit.
+SQL> SQL> 
+Done. -- 0 msec.
+SQL> 
+Done. -- 1 msec.
+SQL> 
+Done. -- 1 msec.
+SQL> 
+Done. -- 144 msec.
+SQL> SQL> 
+real	0m0.153s
+user	0m0.000s
+sys	0m0.000s
+Connected to OpenLink Virtuoso
+Driver: 07.20.3217 OpenLink Virtuoso ODBC Driver
+OpenLink Interactive SQL (Virtuoso), version 0.9849b.
+Type HELP; for help and EXIT; to exit.
+SQL> SQL> 
+Done. -- 0 msec.
+SQL> 
+Done. -- 2 msec.
+SQL> 
+Done. -- 4571235 msec.
+SQL> 
+*** Error 08S01: [Virtuoso Driver]CL065: Lost connection to server
+at line 5 of Top-Level:
+          checkpoint
+
+real	76m19.976s
+user	0m0.004s
+sys	0m0.000s
+2016年  9月 21日 水曜日 02:47:09 UTC

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 while read line; do
   if [[ $line != "#"* ]]
@@ -10,4 +10,4 @@ while read line; do
   fi
 done < $1
 
-#sh ./12_download_summary.sh
+sh ./12_download_summary.sh
