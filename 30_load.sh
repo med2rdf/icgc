@@ -3,9 +3,10 @@
 #echo -e "\n\nRemove and restart database..."
 #~/virtuoso.sh stop
 #sleep 2
-#~/virtuoso.sh remove
+#~/virtuoso.sh clear
 #sleep 2
 #~/virtuoso.sh start
+#~/virtuoso.sh log
 #sleep 15
 
 date

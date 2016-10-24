@@ -1,6 +1,8 @@
 linked-icgc
 ===========
 
+## Setup
+
 ### Install Git
     $ sudo yum -y install git
 
@@ -42,6 +44,7 @@ linked-icgc
     DirsAllowed = ., /opt/virtuoso/share/virtuoso/vad, /home/ec2-user/data, /home/ec2-user/data/linked-icgc_22
     ;
     ;MaxQueryCostEstimationTime     = 400   ; in seconds
+    ;MaxQueryExecutionTime          = 60    ; in seconds
     MaxQueryExecutionTime           = 6000  ; in seconds
 
 ### Install Node.js
@@ -66,6 +69,14 @@ linked-icgc
     $ wget https://github.com/downloads/d2rq/d2rq/d2rq-0.8.1.tar.gz
     $ tar xvzf d2rq-0.8.1.tar.gz
 
+### Install Portal
+    $ sudo service httpd start
+    $ cd /var/www/html
+    $ git clone https://github.com/ryotas/linked-icgc-portal.git
+    $ vi linked-icgc-portal/js/endpoint.js
+
+## Convert Data
+
 ### Get Project List
     # Download the projecct list into ./data/ from https://dcc.icgc.org/projects/details
     $ sh 00_projects.tsv ./data/projects_2016_09_20_11_54_43.tsv ./input/projects.tsv
@@ -86,6 +97,7 @@ linked-icgc
     # Copy and paste the script in dump_one_graph.sql in isql console
     $ ./virtuoso.sh isql
     $ sh 50_dump_graph.sh
+
 
 ### More details
 
