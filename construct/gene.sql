@@ -1,7 +1,10 @@
+# The results of CONSTRUCT queries are always DISTINCT
+
 PREFIX icgc: <http://icgc.link/vocab/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 CONSTRUCT {
+  ?uri_icgc rdf:type <http://icgc.link/Gene> .
   ?uri_icgc dcterms:identifier ?postfix .
   ?uri_icgc rdfs:label ?postfix .
   ?uri_icgc rdfs:seeAlso ?uri_uniprot .

@@ -75,7 +75,7 @@ linked-icgc
     $ git clone https://github.com/ryotas/linked-icgc-portal.git
     $ vi linked-icgc-portal/js/endpoint.js
 
-## Convert Data
+## Data Generation
 
 ### Get Project List
     # Download the projecct list into ./data/ from https://dcc.icgc.org/projects/details
@@ -85,20 +85,44 @@ linked-icgc
     $ sh 10_download.sh ./input/projects.txt
 
 ### Convert ICGC data into RDF 
+
+Start MySQL.
+    $ sudo service mysqld start
+
     $ sh 20_convert.sh ./input/projects.txt
 
 ### Load N-Triple data into Virtuoso
     $ sh 30_load.sh
 
 ### Generate additional triples
+
+This script issues CONSTRUCT queries and generate the following files.
+
+* /data/x-gene.nt
+
     $ sh 40_construct.sh 
     
 ### Dump the graph into one file
+
     # Copy and paste the script in dump_one_graph.sql in isql console
     $ ./virtuoso.sh isql
     $ sh 50_dump_graph.sh
 
+## Portal
 
-### More details
+Start Virtuoso.
+    $ ~/virtuoso.sh start
+
+Download external datasets to be linked.
+    $ cd ~/data
+    $ wget http://download.bio2rdf.org/release/3/hgnc/hgnc_complete_set.nq.gz
+
+Load data.
+    $ sh 60_load_all.sh
+
+Start web server.
+    $ sudo service httpd start
+
+## For More Details
 
 Refer [Togo Wiki](http://wiki.lifesciencedb.jp/mw/%E3%81%8C%E3%82%93%E3%82%B2%E3%83%8E%E3%83%A0#Linked_ICGC_.EF.BC.88.E3.83.87.E3.83.BC.E3.82.BF.E7.94.9F.E6.88.90.EF.BC.89.E3.81.AE.E6.89.8B.E9.A0.86)

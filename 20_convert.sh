@@ -3,12 +3,16 @@
 while read line; do
   if [[ $line != "#"* ]]
   then
-    if [ -f ./output/$line.nt ]; then
-      echo "File ./output/$line.nt exists. Skipped."
+    project_code=`echo $line | cut -f 1`
+    if [[ $project_code == "code" ]]; then
+      echo ""
+    #elif [[ -f ./output/$project_code.nt ]]; then
+    #  echo "File ./output/$project_code.nt exists. Skipped."
     else 
-      sh ./21_sed.sh $line
-      sh ./22_mysql.sh $line
-      sh ./23_d2rq.sh $line
+      echo "#### $project_code ####"
+      sh ./21_sed.sh $project_code
+      sh ./22_mysql.sh $project_code
+      sh ./23_d2rq.sh $project_code
     fi
   fi
 done < $1
