@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ -f ./output/x-gene.nt ]; then
   echo -e "\n\nFile ./output/x-gene.nt exists. Removing it..."
 fi

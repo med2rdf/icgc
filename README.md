@@ -11,13 +11,23 @@ linked-icgc
     $ git clone https://github.com/ryotas/linked-icgc_22
 
 ### Install MySQL 
+
+Install MySQL.
+
     $ sudo yum -y install php php-mbstring mysql-server php-mysql
     $ sudo service mysqld start
     $ sudo mysql
     $ SET PASSWORD FOR root@localhost=PASSWORD('p');
     $ exit
 
-### Install Virtuoso  
+Configure buffer_pool_size.
+
+    $ sudo vi /etc/my.cnf
+    innodb_buffer_pool_size = 2G
+    $ sudo service mysqld restart
+
+### Install Virtuoso
+
     $ sudo yum install gcc openssl-devel
     $ sudo yum install aclocal autoconf autoheader automake glibtoolize bison flex gperf 
     # Get download link from https://github.com/openlink/virtuoso-opensource/releases
@@ -29,11 +39,13 @@ linked-icgc
     $ make
     $ make install
 
-### Get virtuoso.sh
+Get virtuoso.sh.
+
     $ cd $HOME
     $ wget https://raw.githubusercontent.com/dbcls/rdfsummit/master/virtuoso/virtuoso.sh
 
-### Configure Virtuoso
+Configure Virtuoso.
+
     $ ~/virtuoso.sh edit
     ;; Uncomment next two lines if there is 16 GB system memory free
     NumberOfBuffers          = 1360000
@@ -87,11 +99,15 @@ linked-icgc
 ### Convert ICGC data into RDF 
 
 Start MySQL.
-    $ sudo service mysqld start
 
+    $ sudo service mysqld start
     $ sh 20_convert.sh ./input/projects.txt
 
 ### Load N-Triple data into Virtuoso
+
+    $ ~/virtuoso.sh stop
+    $ ~/virtuoso.sh clear
+    $ ~/virtuoso.sh start
     $ sh 30_load.sh
 
 ### Generate additional triples
@@ -99,6 +115,7 @@ Start MySQL.
 This script issues CONSTRUCT queries and generate the following files.
 
 * /data/x-gene.nt
+
 
     $ sh 40_construct.sh 
     
