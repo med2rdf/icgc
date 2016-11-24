@@ -112,10 +112,7 @@ Start MySQL.
 
 ### Generate additional triples
 
-This script issues CONSTRUCT queries and generate the following files.
-
-* /data/x-gene.nt
-
+This script issues a CONSTRUCT query and generate a file (/data/x-gene.nt).
 
     $ sh 40_construct.sh 
     
