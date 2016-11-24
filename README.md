@@ -98,8 +98,6 @@ Configure Virtuoso.
 
 ### Convert ICGC data into RDF 
 
-Start MySQL.
-
     $ sudo service mysqld start
     $ sh 20_convert.sh ./input/projects.txt
 
