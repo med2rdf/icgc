@@ -125,16 +125,20 @@ This script issues a CONSTRUCT query and generate a file (/data/x-gene.nt).
 ## Portal
 
 Start Virtuoso.
+
     $ ~/virtuoso.sh start
 
 Download external datasets to be linked.
+
     $ cd ~/data
     $ wget http://download.bio2rdf.org/release/3/hgnc/hgnc_complete_set.nq.gz
 
 Load data.
+
     $ sh 60_load_all.sh
 
 Start web server.
+
     $ sudo service httpd start
 
 ## For More Details
