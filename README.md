@@ -8,7 +8,8 @@ linked-icgc
 
 ### Clone this repository
     $ cd $HOME  
-    $ git clone https://github.com/ryotas/linked-icgc_22
+    $ git clone https://github.com/ryotas/linked-icgc
+    $ git checkout release_23.01
 
 ### Install MySQL 
 
@@ -28,32 +29,31 @@ Configure buffer_pool_size.
 
 ### Install Virtuoso
 
-    $ sudo yum install gcc openssl-devel
-    $ sudo yum install aclocal autoconf autoheader automake glibtoolize bison flex gperf 
+    $ sudo yum -y install gcc openssl-devel
+    $ sudo yum -y install aclocal autoconf autoheader automake glibtoolize bison flex gperf 
     # Get download link from https://github.com/openlink/virtuoso-opensource/releases
     $ wget https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.4.2/virtuoso-opensource-7.2.4.2.tar.gz
+    $ tar xvzf virtuoso-opensource-7.2.4.2
     $ cd virtuoso-opensource-7.2.4.2
     $ sudo mkdir -p /opt/virtuoso
-    $ chown ec2-user:ec2-user /opt/virtuoso
+    $ sudo chown ec2-user:ec2-user /opt/virtuoso
     $ ./configure --prefix=/opt/virtuoso
     $ make
     $ make install
 
 Get virtuoso.sh.
 
-    $ cd $HOME
+    $ cd ~
     $ wget https://raw.githubusercontent.com/dbcls/rdfsummit/master/virtuoso/virtuoso.sh
 
-Configure Virtuoso.
+Configure Virtuoso for 1 GB system memory (assuming AWS micro instance).
 
-    $ ~/virtuoso.sh edit
-    ;; Uncomment next two lines if there is 16 GB system memory free
-    NumberOfBuffers          = 1360000
-    MaxDirtyBuffers          = 1000000
-    ;
+    $ sh virtuoso.sh edit
     ;NumberOfBuffers          = 10000
     ;MaxDirtyBuffers          = 6000
-    DirsAllowed = ., /opt/virtuoso/share/virtuoso/vad, /home/ec2-user/data, /home/ec2-user/data/linked-icgc_22
+    NumberOfBuffers          = 80000
+    MaxDirtyBuffers          = 60000
+    DirsAllowed = ., /opt/virtuoso/share/virtuoso/vad, /home/ec2-user/data
     ;
     ;MaxQueryCostEstimationTime     = 400   ; in seconds
     ;MaxQueryExecutionTime          = 60    ; in seconds
@@ -62,17 +62,16 @@ Configure Virtuoso.
 ### Install Node.js
     $ mkdir ~/node
     $ cd ~/node
-    $ wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.xz
-    $ tar node-v4.5.0-linux-x64.tar.xz
-    $ export PATH=$PAHT:/home/ec2-user/node/node-v4.5.0-linux-x64/bin
+    $ wget https://nodejs.org/dist/v6.9.4/node-v6.9.4-linux-x64.tar.xz
+    $ tar xvJf node-v6.9.4-linux-x64.tar.xz
+    $ export PATH=$PATH:$HOME/node/node-v6.9.4-linux-x64/bin
 
 ### Install SPARQL client
-    $ cd $HOME
+    $ cd ~
     $ git clone https://github.com/ryotas/sparql-gateway.git
     $ cd ~/sparql-gateway
-    $ npm install request fs config
+    $ npm install request fs config forever express body-parser mongoose
     # Set the host ip of the server
-    $ cd ~/linked-icgc_22
     $ vi config/default.json
 
 ### Install D2RQ
@@ -84,16 +83,20 @@ Configure Virtuoso.
 ### Install Portal
     $ sudo service httpd start
     $ cd /var/www/html
+    $ sudo chown ec2-user:ec2-user /var/www/html
     $ git clone https://github.com/ryotas/linked-icgc-portal.git
     $ vi linked-icgc-portal/js/endpoint.js
+    var endpoint = 'http://<global_ip>:9001/sparql';
 
 ## Data Generation
 
 ### Get Project List
+
     # Download the projecct list into ./data/ from https://dcc.icgc.org/projects/details
     $ sh 00_projects.tsv ./data/projects_2016_09_20_11_54_43.tsv ./input/projects.tsv
 
 ### Download ICGC data  
+
     $ sh 10_download.sh ./input/projects.txt
 
 ### Convert ICGC data into RDF 
