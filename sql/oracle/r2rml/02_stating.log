@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 12.2.0.1.0 - Production on 水 8月 30 22:29:03 2017
+SQL*Loader: Release 12.2.0.1.0 - Production on 木 8月 31 02:04:21 2017
 
 Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
 
@@ -44,8 +44,8 @@ RDF$STC_OBJ                         NEXT    * WHT    CHARACTER
 SQL*Loaderのメイン・スレッドによってロードされたストリーム・バッファの合計:        1
 SQL*Loaderのロード・スレッドによってロードされたストリーム・バッファの合計:        0
 
-実行開始水 8月  30 22:29:03 2017
-実行終了水 8月  30 22:29:07 2017
+実行開始木 8月  31 02:04:21 2017
+実行終了木 8月  31 02:04:21 2017
 
-実行時間:        00: 00: 03.78
-CPU時間 :        00: 00: 00.04
+実行時間:        00: 00: 00.08
+CPU時間 :        00: 00: 00.02
