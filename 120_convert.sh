@@ -10,9 +10,9 @@ while read line; do
     #  echo "File ./output/$project_code.nt exists. Skipped."
     else 
       echo "#### $project_code ####"
-      sh ./21_sed.sh $project_code
-      sh ./22_mysql.sh $project_code
-      sh ./23_d2rq.sh $project_code
+      sh ./121_sed.sh $project_code
+      sh ./122_mysql.sh $project_code
+      sh ./123_d2rq.sh $project_code
     fi
   fi
 done < $1

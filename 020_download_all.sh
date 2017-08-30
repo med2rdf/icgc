@@ -6,6 +6,6 @@ while read line; do
     echo $line
     project_code=`echo $line | cut -f 1`
     echo $project_code
-    sh ./11_download.sh $project_code
+    sh ./021_download.sh $project_code
   fi
 done < $1
