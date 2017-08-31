@@ -19,13 +19,13 @@ while read line; do
     else 
       echo "#### $project_code ####"
 
-      cd ../../input/$project_code
+      cd $SCRIPT_HOME/input/$project_code
       sh $SCRIPT_HOME/load/00_run.sh
       
       cd $SCRIPT_HOME/normalize
       sh 00_run.sh
 
-      cd $SCRIPT_HOME/../../output
+      cd $SCRIPT_HOME/output
       sqlplus icgc_user/oracle @$SCRIPT_HOME/r2rml/05_spool.sql > /dev/null
       mv export.nt $project_code.nt && gzip $project_code.nt
     fi

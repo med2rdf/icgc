@@ -1,3 +1,7 @@
+## Testing Scripts
+
+    $ sh 00_run.sh project.txt
+
 ## Running Oracle Database on Docker Container
 
 Go to the following page and register.
