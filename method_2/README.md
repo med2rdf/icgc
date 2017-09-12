@@ -11,9 +11,9 @@ https://store.docker.com/images/oracle-database-enterprise-edition
     $ sudo apt-get install docker.io
 
     $ sudo docker login
-
+    
     $ sudo docker pull store/oracle/database-enterprise:12.2.0.1
-
+    
     $ vi db_enf.dat
     DB_PASSWD=oracle
     DB_BUNDLE=high
