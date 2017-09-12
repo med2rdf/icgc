@@ -14,7 +14,7 @@ https://store.docker.com/images/oracle-database-enterprise-edition
     
     $ sudo docker pull store/oracle/database-enterprise:12.2.0.1
     
-    $ vi db_enf.dat
+    $ vi db_env.dat
     DB_PASSWD=oracle
     DB_BUNDLE=high
 
