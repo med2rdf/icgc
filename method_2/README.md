@@ -24,4 +24,4 @@ https://store.docker.com/images/oracle-database-enterprise-edition
 
 To delete the container:
 
-    sudo docker stop oracle && sudo docker rm oracle
+    $ sudo docker stop oracle && sudo docker rm oracle
