@@ -20,7 +20,7 @@ https://store.docker.com/images/oracle-database-enterprise-edition
 
     $ sudo docker run -p 1521:1521 -p 5500:5500 -it --name oracle --shm-size="4g" -e DB_PASSWD=oracle store/oracle/database-enterprise:12.2.0.1
 
-    $ sudo docker exec -u oracle -it dockerDB /bin/bash
+    $ sudo docker exec -u oracle -it oracle /bin/bash
 
 To delete the container:
 
