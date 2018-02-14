@@ -1,51 +1,51 @@
 
-SQL*Loader: Release 12.2.0.1.0 - Production on 木 8月 31 12:39:54 2017
+SQL*Loader: Release 12.2.0.1.0 - Production on Wed Feb 14 13:27:17 2018
 
 Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
 
-制御ファイル:    02_stating.ctl
-データファイルr2rml.nt
-  不良ファイル:  r2rml.bad
-  廃棄ファイル:  指定なし
+Control File:   02_stating.ctl
+Data File:      r2rml.nt
+  Bad File:     r2rml.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
 
- (すべて廃棄できます)
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Continuation:    none specified
+Path used:      Direct
 
-ロード数: ALL
-スキップ数: 0
-許容エラー数: 50
-継続文字:    指定なし
-使用パス:      ダイレクト
+Table R2RML, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
 
-表R2RML、 ロード済 すべての論理レコードから
-この表に対する有効な挿入オプション: TRUNCATE
-
-   列名                  位置   長さ  用語暗号化データ型
+   Column Name                  Position   Len  Term Encl Datatype
 ------------------------------ ---------- ----- ---- ---- ---------------------
-RDF$STC_SUB                        FIRST    * WHT    CHARACTER            
-RDF$STC_PRED                        NEXT    * WHT    CHARACTER            
-RDF$STC_OBJ                         NEXT    * WHT    CHARACTER            
+RDF$STC_SUB                         FIRST     *  WHT      CHARACTER            
+RDF$STC_PRED                         NEXT     *  WHT      CHARACTER            
+RDF$STC_OBJ                          NEXT     *  WHT      CHARACTER            
 
 
-表R2RML:
-  317 行は正常にロードされました。
-  0 行はデータ・エラーのためロードされませんでした。
-  0 行は、すべてのWHEN句が失敗したためロードされませんでした。
-  0 行はすべてのフィールドがNULLであったためロードされませんでした。
+Table R2RML:
+  317 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
 
-バインド配列サイズはダイレクト・パスで使用されません。
-列配列の行数:     5000
-ストリーム・バッファのバイト数:   256000
-読取りバッファのバイト数:  1048576
+Bind array size not used in direct path.
+Column array  rows :    5000
+Stream buffer bytes:  256000
+Read   buffer bytes: 1048576
 
-スキップされた論理レコードの合計:          0
-読み込まれた論理レコードの合計:           317
-拒否された論理レコードの合計:               0
-廃棄された論理レコードの合計:        0
-SQL*Loaderのメイン・スレッドによってロードされたストリーム・バッファの合計:        1
-SQL*Loaderのロード・スレッドによってロードされたストリーム・バッファの合計:        0
+Total logical records skipped:          0
+Total logical records read:           317
+Total logical records rejected:         0
+Total logical records discarded:        0
+Total stream buffers loaded by SQL*Loader main thread:        1
+Total stream buffers loaded by SQL*Loader load thread:        0
 
-実行開始木 8月  31 12:39:54 2017
-実行終了木 8月  31 12:39:54 2017
+Run began on Wed Feb 14 13:27:17 2018
+Run ended on Wed Feb 14 13:27:17 2018
 
-実行時間:        00: 00: 00.08
-CPU時間 :        00: 00: 00.02
+Elapsed time was:     00:00:00.07
+CPU time was:         00:00:00.02
