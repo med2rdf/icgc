@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 12.2.0.1.0 - Production on Wed Feb 14 13:27:17 2018
+SQL*Loader: Release 12.2.0.1.0 - Production on Wed Feb 14 14:24:26 2018
 
 Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
 
@@ -44,8 +44,8 @@ Total logical records discarded:        0
 Total stream buffers loaded by SQL*Loader main thread:        1
 Total stream buffers loaded by SQL*Loader load thread:        0
 
-Run began on Wed Feb 14 13:27:17 2018
-Run ended on Wed Feb 14 13:27:17 2018
+Run began on Wed Feb 14 14:24:26 2018
+Run ended on Wed Feb 14 14:24:26 2018
 
 Elapsed time was:     00:00:00.07
 CPU time was:         00:00:00.02
