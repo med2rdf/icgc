@@ -1,5 +1,5 @@
-linked-icgc
-===========
+ICGC RDF Data Generator
+=======================
 
 * Method 1 uses:
     * MySQL -- for storing the original table data
