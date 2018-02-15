@@ -7,4 +7,4 @@ ICGC RDF Data Generator
     * Virtuoso -- for generating additional RDF data and merging them
 
 * Method 2 uses:
-    * Oracle -- for doing everything, using R2RML mapping
+    * Oracle -- for doing all of above, using R2RML mapping
