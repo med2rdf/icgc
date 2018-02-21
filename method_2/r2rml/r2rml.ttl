@@ -25,7 +25,14 @@
   ] .
 
 <#TriplesMap_Donor>
-  rr:logicalTable [ rr:tableName "DONOR" ] ; 
+  rr:logicalTable [ rr:tableName """
+    SELECT DONOR.* ,
+    ( CASE DONOR_SEX
+        WHEN 'male' THEN 'PATO_0000384'
+        WHEN 'female' THEN 'PATO_0000383'
+    END ) DONOR_SEX_OBO
+    FROM DONOR
+  """ ] ; 
   rr:subjectMap [ 
     rr:template "http://icgc.link/Donor/{DONOR_ID}" ; 
     rr:class icgc-class:Donor ; 
@@ -131,7 +138,7 @@
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:donor_sex ; 
-    rr:objectMap [ rr:column "DONOR_SEX" ] ;
+    rr:objectMap [ rr:template "http://purl.obolibrary.org/obo/{DONOR_SEX_OBO}" ] ;
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:donor_vital_status ; 

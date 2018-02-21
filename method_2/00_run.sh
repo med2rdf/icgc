@@ -11,12 +11,17 @@ cd $SCRIPT_HOME/table
 sqlplus icgc_user/oracle@orclpdb1 @00_run.sql
 
 echo ""
-echo "***************************"
-echo "Setting up R2RML mapping .."
-echo "***************************"
+echo "************************************"
+echo "Creating additional (empty) tables.."
+echo "************************************"
 
 cd $SCRIPT_HOME/normalize # For creating tables before verifing r2rml
 sh 00_run.sh
+
+echo ""
+echo "***************************"
+echo "Setting up R2RML mapping .."
+echo "***************************"
 
 cd $SCRIPT_HOME/r2rml
 sh 00_run.sh
@@ -25,18 +30,18 @@ cd $SCRIPT_HOME
 while read line; do
   if [[ $line != "#"* ]]
   then
-    project_code=`echo $line | cut -f 1`
-    if [[ $project_code == "code" ]]; then
+    export PROJECT_CODE=`echo $line | cut -f 1`
+    if [[ $PROJECT_CODE == "code" ]]; then
       echo ""
-    #elif [[ -f ./output/$project_code.nt ]]; then
-    # echo "File ./output/$project_code.nt exists. Skipped."
+    #elif [[ -f ./output/$PROJECT_CODE.nt ]]; then
+    # echo "File ./output/$PROJECT_CODE.nt exists. Skipped."
     else 
       echo ""
       echo "****************************"
-      echo "Loading $project_code data.."
+      echo "Loading $PROJECT_CODE data.."
       echo "****************************"
 
-      cd $SCRIPT_HOME/input/$project_code
+      cd $SCRIPT_HOME/input/$PROJECT_CODE
       sh $SCRIPT_HOME/load/00_run.sh
       
       cd $SCRIPT_HOME/normalize # For re-creating tables and loading data
@@ -44,12 +49,12 @@ while read line; do
 
       echo ""
       echo "****************************"
-      echo "Exporting $project_code.nt.."
+      echo "Exporting $PROJECT_CODE.nt.."
       echo "****************************"
 
       cd $SCRIPT_HOME/output
       sqlplus icgc_user/oracle@orclpdb1 @$SCRIPT_HOME/r2rml/05_spool.sql > /dev/null
-      mv export.nt $project_code.nt && gzip $project_code.nt
+      mv export.nt $PROJECT_CODE.nt && gzip $PROJECT_CODE.nt
     fi
   fi
 done < $1
