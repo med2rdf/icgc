@@ -1,0 +1,5 @@
+oracle/oradata/*
+input/*
+output/*
+log/*
+!.gitkeep
