@@ -1,6 +1,26 @@
 ICGC RDF
 =======================
 
+Ubuntu 18.04
+
+## Install Docker
+
+    $ sudo apt-get update
+    $ sudo apt install docker.io
+    $ sudo systemctl start docker
+
+## Download Data
+
+    $ mkdir oracle
+    $ cd oracle
+    $ git clone https://github.com/oracle/docker-images.git
+
+Build docker image (needs 4GB memory = EC2 t2.medium)
+
+    $ cd ~/oracle/docker-images/OracleDatabase/SingleInstance/dockerfiles/
+    $ ./buildDockerImage.sh -v 12.2.0.1 -e
+
+
 ## Download Data
 
     $ sh 01_projects.sh projects_2018_02_14_10_50_42.tsv
