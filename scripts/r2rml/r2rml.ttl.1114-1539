@@ -1,20 +1,19 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
-@prefix icgc: <http://icgc.link/> .
+@prefix icgc: <http://icgc.link/vocab/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix icgc-class: <http://icgc.link/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix med2rdf: <http://med2rdf.org/ontology/med2rdf#> .
-@prefix faldo: <http://biohackathon.org/resource/faldo> .
 
 ##################################################
 # RESOURCES (CLASS, LABEL, IDENTIFIER)
 ##################################################
 
-<#Project>
+<#TriplesMap_Project>
   rr:logicalTable [ rr:tableName "PROJECT" ] ; 
   rr:subjectMap [ 
     rr:template "http://icgc.link/Project/{PROJECT_CODE}" ; 
-    rr:class icgc:Project ; 
+    rr:class icgc-class:Project ; 
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate dct:identifier ; 
@@ -25,20 +24,17 @@
     rr:objectMap [ rr:column "PROJECT_CODE" ] ;
   ] .
 
-<#DonorView>
-  rr:sqlQuery """
+<#TriplesMap_Donor>
+  rr:logicalTable [ rr:sqlQuery """
     SELECT
       DONOR.*
     , ( CASE DONOR_SEX WHEN 'male' THEN 'PATO_0000384' WHEN 'female' THEN 'PATO_0000383' END ) DONOR_SEX_OBO
     , ( CASE DONOR_VITAL_STATUS WHEN 'alive' THEN 'PATO_0001421' WHEN 'deceased' THEN 'PATO_0001422' END ) DONOR_VITAL_STATUS_OBO
     FROM DONOR
-  """ .
-
-<#Donor>
-  rr:logicalTable <#DonorView> ;
+  """ ] ; 
   rr:subjectMap [ 
     rr:template "http://icgc.link/Donor/{DONOR_ID}" ; 
-    rr:class icgc:Donor ; 
+    rr:class icgc-class:Donor ; 
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate dct:identifier ; 
@@ -49,18 +45,18 @@
     rr:objectMap [ rr:column "DONOR_ID" ] ;
   ] .
 
-<#Detection>
+<#TriplesMap_Detection>
   rr:logicalTable [ rr:tableName "SSM_DETECTION" ] ; 
   rr:subjectMap [
     rr:template "http://icgc.link/Detection/{DONOR_ID}_{SPECIMEN_ID}_{MUTATION_ID}" ;
-    rr:class icgc:Detection ;
+    rr:class icgc-class:Detection ;
   ] .
 
-<#Mutation>
+<#TriplesMap_Mutation>
   rr:logicalTable [ rr:tableName "SSM_MUTATION" ] ; 
   rr:subjectMap [ 
     rr:template "http://icgc.link/Mutation/{MUTATION_ID}" ;
-    rr:class med2rdf:Variation ;
+    rr:class icgc-class:Mutation ;
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate dct:identifier ; 
@@ -75,39 +71,27 @@
 # OBJECT PROPERTIES
 ##################################################
 
-<#Donor>
+<#TriplesMap_Donor>
   rr:predicateObjectMap [ 
     rr:predicate icgc:project ;
     rr:objectMap [ 
-      rr:parentTriplesMap <#Project> ; 
+      rr:parentTriplesMap <#TriplesMap_Project> ; 
       rr:joinCondition [ rr:child "PROJECT_CODE"; rr:parent "PROJECT_CODE" ]
     ]
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate icgc:sex ; 
-    rr:objectMap [ rr:template "http://purl.obolibrary.org/obo/{DONOR_SEX_OBO}" ] ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate icgc:vital_status ; 
-    rr:objectMap [ rr:template "http://purl.obolibrary.org/obo/{DONOR_VITAL_STATUS_OBO}" ] ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate icgc:diagnosis_icd10 ; 
-    rr:objectMap [ rr:template "http://purl.bioontology.org/ontology/ICD10/{DONOR_DIAGNOSIS_ICD10}" ] ;
   ] .
 
-<#Detection>
+<#TriplesMap_Detection>
   rr:predicateObjectMap [
     rr:predicate icgc:donor ;
     rr:objectMap [
-      rr:parentTriplesMap <#Donor> ; 
+      rr:parentTriplesMap <#TriplesMap_Donor> ; 
       rr:joinCondition [ rr:child "DONOR_ID"; rr:parent "DONOR_ID" ]
     ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate icgc:mutation ;
     rr:objectMap [
-      rr:parentTriplesMap <#Mutation> ; 
+      rr:parentTriplesMap <#TriplesMap_Mutation> ; 
       rr:joinCondition [ rr:child "MUTATION_ID"; rr:parent "MUTATION_ID" ]
     ]
   ] .
@@ -116,7 +100,7 @@
 # DATA PROPERTIES
 ##################################################
 
-<#Project>
+<#TriplesMap_Project>
   rr:predicateObjectMap [ 
     rr:predicate icgc:project_code ; 
     rr:objectMap [ rr:column "PROJECT_CODE" ] ;
@@ -142,7 +126,7 @@
     rr:objectMap [ rr:column "COUNTRIES" ] ;
   ] .
 
-<#Donor>
+<#TriplesMap_Donor>
   rr:predicateObjectMap [ 
     rr:predicate icgc:study_donor_involved_in ; 
     rr:objectMap [ rr:column "STUDY_DONOR_INVOLVED_IN" ] ;
@@ -152,47 +136,59 @@
     rr:objectMap [ rr:column "SUBMITTED_DONOR_ID" ] ;
   ] ;
   rr:predicateObjectMap [ 
+    rr:predicate icgc:donor_sex ; 
+    rr:objectMap [ rr:template "http://purl.obolibrary.org/obo/{DONOR_SEX_OBO}" ] ;
+  ] ;
+  rr:predicateObjectMap [ 
+    rr:predicate icgc:donor_vital_status ; 
+    rr:objectMap [ rr:template "http://purl.obolibrary.org/obo/{DONOR_VITAL_STATUS_OBO}" ] ;
+  ] ;
+  rr:predicateObjectMap [ 
     rr:predicate icgc:disease_status_last_followup ; 
     rr:objectMap [ rr:column "DISEASE_STATUS_LAST_FOLLOWUP" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:relapse_type ; 
+    rr:predicate icgc:donor_relapse_type ; 
     rr:objectMap [ rr:column "DONOR_RELAPSE_TYPE" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:age_at_diagnosis ; 
+    rr:predicate icgc:donor_age_at_diagnosis ; 
     rr:objectMap [ rr:column "DONOR_AGE_AT_DIAGNOSIS" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:age_at_enrollment ; 
+    rr:predicate icgc:donor_age_at_enrollment ; 
     rr:objectMap [ rr:column "DONOR_AGE_AT_ENROLLMENT" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:age_at_last_followup ; 
+    rr:predicate icgc:donor_age_at_last_followup ; 
     rr:objectMap [ rr:column "DONOR_AGE_AT_LAST_FOLLOWUP" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:relapse_interval ; 
+    rr:predicate icgc:donor_relapse_interval ; 
     rr:objectMap [ rr:column "DONOR_RELAPSE_INTERVAL" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:tumour_staging_system_at_diagnosis ; 
+    rr:predicate icgc:donor_diagnosis_icd10 ; 
+    rr:objectMap [ rr:column "DONOR_DIAGNOSIS_ICD10" ] ;
+  ] ;
+  rr:predicateObjectMap [ 
+    rr:predicate icgc:donor_tumour_staging_system_at_diagnosis ; 
     rr:objectMap [ rr:column "DONOR_TUMOUR_STAGING_SYSTEM_AT_DIAGNOSIS" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:tumour_stage_at_diagnosis ; 
+    rr:predicate icgc:donor_tumour_stage_at_diagnosis ; 
     rr:objectMap [ rr:column "DONOR_TUMOUR_STAGE_AT_DIAGNOSIS" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:tumour_stage_at_diagnosis_supplemental ; 
+    rr:predicate icgc:donor_tumour_stage_at_diagnosis_supplemental ; 
     rr:objectMap [ rr:column "DONOR_TUMOUR_STAGE_AT_DIAGNOSIS_SUPPLEMENTAL" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:survival_time ; 
+    rr:predicate icgc:donor_survival_time ; 
     rr:objectMap [ rr:column "DONOR_SURVIVAL_TIME" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate icgc:interval_of_last_followup ; 
+    rr:predicate icgc:donor_interval_of_last_followup ; 
     rr:objectMap [ rr:column "DONOR_INTERVAL_OF_LAST_FOLLOWUP" ] ;
   ] ;
   rr:predicateObjectMap [ 
@@ -208,7 +204,7 @@
     rr:objectMap [ rr:column "CANCER_HISTORY_FIRST_DEGREE_RELATIVE" ] ;
   ] .
 
-<#Detection>
+<#TriplesMap_Detection>
   rr:predicateObjectMap [ 
     rr:predicate icgc:specimen_id ; 
     rr:objectMap [ rr:column "SPECIMEN_ID" ] ;
@@ -302,7 +298,7 @@
     rr:objectMap [ rr:column "RAW_DATA_ACCESSION" ] ;
   ] . 
 
-<#Mutation>
+<#TriplesMap_Mutation>
   rr:predicateObjectMap [ 
     rr:predicate icgc:chromosome ; 
     rr:objectMap [ rr:column "CHROMOSOME" ] ;
@@ -328,89 +324,19 @@
     rr:objectMap [ rr:column "MUTATION_TYPE" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate med2rdf:reference_allele ; 
+    rr:predicate icgc:reference_genome_allele ; 
     rr:objectMap [ rr:column "REFERENCE_GENOME_ALLELE" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate med2rdf:mutated_from_allele ; 
+    rr:predicate icgc:mutated_from_allele ; 
     rr:objectMap [ rr:column "MUTATED_FROM_ALLELE" ] ;
   ] ;
   rr:predicateObjectMap [ 
-    rr:predicate med2rdf:mutated_to_allele ; 
+    rr:predicate icgc:mutated_to_allele ; 
     rr:objectMap [ rr:column "MUTATED_TO_ALLELE" ] ;
-  ] ; 
-  rr:predicateObjectMap [ 
-    rr:predicate faldo:location ; 
-    rr:objectMap [
-      rr:template "_Region_{MUTATION_ID}" ; 
-      rr:termType rr:BlankNode ;
-    ] ;
   ] .
 
-<#Region>
-  rr:logicalTable [ rr:tableName "SSM_MUTATION" ] ;
-  rr:subjectMap [
-    rr:template "_Region_{MUTATION_ID}" ;
-    rr:termType rr:BlankNode ;
-    rr:class faldo:Region ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate faldo:begin ;
-    rr:objectMap [
-      rr:template "_BeginPosition_{MUTATION_ID}" ;
-      rr:termType rr:BlankNode ;
-    ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate faldo:end ;
-    rr:objectMap [
-      rr:template "_EndPosition_{MUTATION_ID}" ;
-      rr:termType rr:BlankNode ;
-    ] ;
-  ] .
-
-<#BeginPosition>
-  rr:logicalTable [ rr:tableName "SSM_MUTATION" ] ;
-  rr:subjectMap [
-    rr:template "_BeginPosition_{MUTATION_ID}" ;
-    rr:termType rr:BlankNode ;
-    rr:class faldo:Position ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate faldo:reference ; 
-    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate faldo:position ;
-    rr:objectMap [ rr:column "CHROMOSOME_START" ] ;
-  ] . 
-
-<#EndPosition>
-  rr:logicalTable [ rr:tableName "SSM_MUTATION" ] ;
-  rr:subjectMap [
-    rr:template "_EndPosition_{MUTATION_ID}" ;
-    rr:termType rr:BlankNode ;
-    rr:class faldo:Position ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate faldo:reference ; 
-    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate faldo:position ;
-    rr:objectMap [ rr:column "CHROMOSOME_END" ] ;
-  ] . 
-
-<#Effect>
-  rr:logicalTable [ rr:tableName "SSM_EFFECT" ] ;
-  rr:subjectMap [
-    rr:template "http://icgc.link/Effect/{MUTATION_ID}_{GENE_AFFECTED}" ;
-    rr:class icgc:Project ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate icgc:gene_affected ; 
-    rr:objectMap [ rr:template "http://rdf.ebi.ac.uk/resource/ensembl/{GENE_AFFECTED}" ] ;
-  ] ;
+<#TriplesMap_Effect>
   rr:predicateObjectMap [ 
     rr:predicate icgc:consequence_type ; 
     rr:objectMap [ rr:column "CONSEQUENCE_TYPE" ] ;
@@ -422,6 +348,10 @@
   rr:predicateObjectMap [ 
     rr:predicate icgc:cds_mutation ; 
     rr:objectMap [ rr:column "CDS_MUTATION" ] ;
+  ] ;
+  rr:predicateObjectMap [ 
+    rr:predicate icgc:gene_affected ; 
+    rr:objectMap [ rr:column "GENE_AFFECTED" ] ;
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:transcript_affected ; 

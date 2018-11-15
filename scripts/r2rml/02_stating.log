@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 12.2.0.1.0 - Production on Tue Nov 13 16:00:10 2018
+SQL*Loader: Release 12.2.0.1.0 - Production on Thu Nov 15 15:37:32 2018
 
 Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
 
@@ -28,7 +28,7 @@ RDF$STC_OBJ                          NEXT  5000           CHARACTER
 
 
 Table R2RML:
-  317 Rows successfully loaded.
+  371 Rows successfully loaded.
   0 Rows not loaded due to data errors.
   0 Rows not loaded because all WHEN clauses were failed.
   0 Rows not loaded because all fields were null.
@@ -39,14 +39,14 @@ Stream buffer bytes:  256000
 Read   buffer bytes: 1048576
 
 Total logical records skipped:          0
-Total logical records read:           317
+Total logical records read:           371
 Total logical records rejected:         0
 Total logical records discarded:        0
 Total stream buffers loaded by SQL*Loader main thread:        1
 Total stream buffers loaded by SQL*Loader load thread:        0
 
-Run began on Tue Nov 13 16:00:10 2018
-Run ended on Tue Nov 13 16:00:10 2018
+Run began on Thu Nov 15 15:37:32 2018
+Run ended on Thu Nov 15 15:37:32 2018
 
-Elapsed time was:     00:00:00.16
-CPU time was:         00:00:00.02
+Elapsed time was:     00:00:00.21
+CPU time was:         00:00:00.06

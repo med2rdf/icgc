@@ -45,14 +45,6 @@ while read line; do
       cd $SCRIPT_HOME/normalize # For re-creating tables and loading data
       sh 00_run.sh
 
-      echo ""
-      echo "****************************"
-      echo "Exporting $PROJECT_CODE.nt.."
-      echo "****************************"
-
-      cd $SCRIPT_HOME/../output
-      sqlplus icgc_user/oracle@orclpdb1 @$SCRIPT_HOME/r2rml/05_spool.sql > /dev/null
-      mv export.nt $PROJECT_CODE.nt && gzip $PROJECT_CODE.nt
     #fi
   fi
 done < $1

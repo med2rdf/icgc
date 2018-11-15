@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script modify projects.tsv, which can be obtained from the original ICGC portal.
 #
-# sh 00_projects.sh projects_2016_09_20_11_54_43.tsv
+# $ sh 01_projects.sh projects_2018_02_14_10_50_42.tsv
 
 echo "code	name	primary_site	tumour_type	tumour_subtype	countries" > projects.tsv
 

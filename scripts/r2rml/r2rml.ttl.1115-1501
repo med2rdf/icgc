@@ -1,7 +1,8 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
-@prefix icgc: <http://icgc.link/> .
+@prefix icgc: <http://icgc.link/vocab/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix icgc-class: <http://icgc.link/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix med2rdf: <http://med2rdf.org/ontology/med2rdf#> .
 @prefix faldo: <http://biohackathon.org/resource/faldo> .
@@ -14,7 +15,7 @@
   rr:logicalTable [ rr:tableName "PROJECT" ] ; 
   rr:subjectMap [ 
     rr:template "http://icgc.link/Project/{PROJECT_CODE}" ; 
-    rr:class icgc:Project ; 
+    rr:class icgc-class:Project ; 
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate dct:identifier ; 
@@ -25,20 +26,17 @@
     rr:objectMap [ rr:column "PROJECT_CODE" ] ;
   ] .
 
-<#DonorView>
-  rr:sqlQuery """
+<#Donor>
+  rr:logicalTable [ rr:sqlQuery """
     SELECT
       DONOR.*
     , ( CASE DONOR_SEX WHEN 'male' THEN 'PATO_0000384' WHEN 'female' THEN 'PATO_0000383' END ) DONOR_SEX_OBO
     , ( CASE DONOR_VITAL_STATUS WHEN 'alive' THEN 'PATO_0001421' WHEN 'deceased' THEN 'PATO_0001422' END ) DONOR_VITAL_STATUS_OBO
     FROM DONOR
-  """ .
-
-<#Donor>
-  rr:logicalTable <#DonorView> ;
+  """ ] ; 
   rr:subjectMap [ 
     rr:template "http://icgc.link/Donor/{DONOR_ID}" ; 
-    rr:class icgc:Donor ; 
+    rr:class icgc-class:Donor ; 
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate dct:identifier ; 
@@ -53,7 +51,7 @@
   rr:logicalTable [ rr:tableName "SSM_DETECTION" ] ; 
   rr:subjectMap [
     rr:template "http://icgc.link/Detection/{DONOR_ID}_{SPECIMEN_ID}_{MUTATION_ID}" ;
-    rr:class icgc:Detection ;
+    rr:class icgc-class:Detection ;
   ] .
 
 <#Mutation>
@@ -360,7 +358,6 @@
       rr:template "_BeginPosition_{MUTATION_ID}" ;
       rr:termType rr:BlankNode ;
     ] ;
-  ] ;
   rr:predicateObjectMap [
     rr:predicate faldo:end ;
     rr:objectMap [
@@ -369,48 +366,7 @@
     ] ;
   ] .
 
-<#BeginPosition>
-  rr:logicalTable [ rr:tableName "SSM_MUTATION" ] ;
-  rr:subjectMap [
-    rr:template "_BeginPosition_{MUTATION_ID}" ;
-    rr:termType rr:BlankNode ;
-    rr:class faldo:Position ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate faldo:reference ; 
-    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate faldo:position ;
-    rr:objectMap [ rr:column "CHROMOSOME_START" ] ;
-  ] . 
-
-<#EndPosition>
-  rr:logicalTable [ rr:tableName "SSM_MUTATION" ] ;
-  rr:subjectMap [
-    rr:template "_EndPosition_{MUTATION_ID}" ;
-    rr:termType rr:BlankNode ;
-    rr:class faldo:Position ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate faldo:reference ; 
-    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate faldo:position ;
-    rr:objectMap [ rr:column "CHROMOSOME_END" ] ;
-  ] . 
-
 <#Effect>
-  rr:logicalTable [ rr:tableName "SSM_EFFECT" ] ;
-  rr:subjectMap [
-    rr:template "http://icgc.link/Effect/{MUTATION_ID}_{GENE_AFFECTED}" ;
-    rr:class icgc:Project ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate icgc:gene_affected ; 
-    rr:objectMap [ rr:template "http://rdf.ebi.ac.uk/resource/ensembl/{GENE_AFFECTED}" ] ;
-  ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:consequence_type ; 
     rr:objectMap [ rr:column "CONSEQUENCE_TYPE" ] ;
@@ -422,6 +378,10 @@
   rr:predicateObjectMap [ 
     rr:predicate icgc:cds_mutation ; 
     rr:objectMap [ rr:column "CDS_MUTATION" ] ;
+  ] ;
+  rr:predicateObjectMap [ 
+    rr:predicate icgc:gene_affected ; 
+    rr:objectMap [ rr:column "GENE_AFFECTED" ] ;
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:transcript_affected ; 

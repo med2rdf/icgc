@@ -1,8 +1,9 @@
 #!/bin/bash
 
+DIR_INPUT=../../input
 release="release_25"
 
-if [ -d ../input/$1 ]; then
+if [ -d $DIR_INPUT/$1 ]; then
 
   echo "Directory $1 already exists. Downloading will be skipped."
 
@@ -10,12 +11,12 @@ else
 
   echo "Downloading $1..."
 
-  mkdir ../input/$1
+  mkdir $DIR_INPUT/$1
 
-  awk '{ if (NR==1) { print $0; }}' < projects.tsv > ../input/$1/project.tsv # header
-  awk '{ if ($1=="'${1}'") { print $0; }}' < projects.tsv >> ../input/$1/project.tsv # this project
+  awk '{ if (NR==1) { print $0; }}' < projects.tsv > $DIR_INPUT/$1/project.tsv # header
+  awk '{ if ($1=="'${1}'") { print $0; }}' < projects.tsv >> $DIR_INPUT/$1/project.tsv # this project
 
-  cd ../input/$1
+  cd $DIR_INPUT/$1
 
   wget -O donor.tsv.gz    https://dcc.icgc.org/api/v1/download?fn=/$release/Projects/$1/donor.$1.tsv.gz
   wget -O specimen.tsv.gz https://dcc.icgc.org/api/v1/download?fn=/$release/Projects/$1/specimen.$1.tsv.gz

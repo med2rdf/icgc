@@ -403,10 +403,6 @@
 
 <#Effect>
   rr:logicalTable [ rr:tableName "SSM_EFFECT" ] ;
-  rr:subjectMap [
-    rr:template "http://icgc.link/Effect/{MUTATION_ID}_{GENE_AFFECTED}" ;
-    rr:class icgc:Project ;
-  ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:gene_affected ; 
     rr:objectMap [ rr:template "http://rdf.ebi.ac.uk/resource/ensembl/{GENE_AFFECTED}" ] ;

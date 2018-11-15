@@ -1,7 +1,9 @@
 #!/bin/bash
+#
+# $ sh 02_download_all.sh projects.tsv
 
 while read line; do
-  if [[ $line != "#"* ]]
+  if [[ $line != "#"* ]] && [[ $line != "code"* ]]
   then
     echo $line
     project_code=`echo $line | cut -f 1`
