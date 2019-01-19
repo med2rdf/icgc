@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix med2rdf: <http://med2rdf.org/ontology/med2rdf#> .
-@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo> .
 
 ##################################################
 # RESOURCES (CLASS, LABEL, IDENTIFIER)
@@ -304,10 +304,6 @@
 
 <#Mutation>
   rr:predicateObjectMap [ 
-    rr:predicate med2rdf:gene ; 
-    rr:objectMap [ rr:column "CHROMOSOME" ] ;
-  ] ;
-  rr:predicateObjectMap [ 
     rr:predicate icgc:chromosome ; 
     rr:objectMap [ rr:column "CHROMOSOME" ] ;
   ] ;
@@ -409,11 +405,7 @@
   rr:logicalTable [ rr:tableName "SSM_EFFECT" ] ;
   rr:subjectMap [
     rr:template "http://icgc.link/Effect/{MUTATION_ID}_{GENE_AFFECTED}" ;
-    rr:class icgc:Effect ;
-  ] ;
-  rr:predicateObjectMap [ 
-    rr:predicate icgc:mutation ; 
-    rr:objectMap [ rr:template "http://icgc.link/Mutation/{MUTATION_ID}" ] ;
+    rr:class icgc:Project ;
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate icgc:gene_affected ; 
