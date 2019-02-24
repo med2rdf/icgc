@@ -56,3 +56,5 @@ while read line; do
     #fi
   fi
 done < $1
+
+date

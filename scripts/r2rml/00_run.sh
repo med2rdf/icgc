@@ -1,5 +1,5 @@
 sqlplus icgc_user/oracle@orclpdb1 @01_staging.sql
-sqlldr  icgc_user/oracle@orclpdb1 02_staging.ctl
+sqlldr  icgc_user/oracle@orclpdb1 02_staging.ctl log=../../log/02_stating.log
 sqlplus icgc_user/oracle@orclpdb1 @03_rdfview.sql
 #sqlplus icgc_user/oracle @04_export.sql
 #sqlplus icgc_user/oracle @05_spool.sql > /dev/null
