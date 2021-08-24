@@ -382,7 +382,7 @@
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate faldo:reference ; 
-    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" ] ;
+    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}/{ASSEMBLY_VERSION}" ] ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate faldo:position ;
@@ -398,7 +398,7 @@
   ] ;
   rr:predicateObjectMap [ 
     rr:predicate faldo:reference ; 
-    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" ] ;
+    rr:objectMap [ rr:template "http://identifiers.org/hco/{CHROMOSOME}/{ASSEMBLY_VERSION}" ] ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate faldo:position ;

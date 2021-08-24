@@ -323,7 +323,7 @@ _:node1d1igpls1x154 <http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/
 _:node1d1igpls1x154 <http://www.w3.org/ns/r2rml#class> <http://biohackathon.org/resource/faldo#Position> .
 <unknown:namespace#BeginPosition> <http://www.w3.org/ns/r2rml#subjectMap> _:node1d1igpls1x154 .
 _:node1d1igpls1x155 <http://www.w3.org/ns/r2rml#predicate> <http://biohackathon.org/resource/faldo#reference> .
-_:node1d1igpls1x156 <http://www.w3.org/ns/r2rml#template> "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" .
+_:node1d1igpls1x156 <http://www.w3.org/ns/r2rml#template> "http://identifiers.org/hco/{CHROMOSOME}/{ASSEMBLY_VERSION}" .
 _:node1d1igpls1x155 <http://www.w3.org/ns/r2rml#objectMap> _:node1d1igpls1x156 .
 <unknown:namespace#BeginPosition> <http://www.w3.org/ns/r2rml#predicateObjectMap> _:node1d1igpls1x155 .
 _:node1d1igpls1x157 <http://www.w3.org/ns/r2rml#predicate> <http://biohackathon.org/resource/faldo#position> .
@@ -337,7 +337,7 @@ _:node1d1igpls1x160 <http://www.w3.org/ns/r2rml#termType> <http://www.w3.org/ns/
 _:node1d1igpls1x160 <http://www.w3.org/ns/r2rml#class> <http://biohackathon.org/resource/faldo#Position> .
 <unknown:namespace#EndPosition> <http://www.w3.org/ns/r2rml#subjectMap> _:node1d1igpls1x160 .
 _:node1d1igpls1x161 <http://www.w3.org/ns/r2rml#predicate> <http://biohackathon.org/resource/faldo#reference> .
-_:node1d1igpls1x162 <http://www.w3.org/ns/r2rml#template> "http://identifiers.org/hco/{CHROMOSOME}#{ASSEMBLY_VERSION}" .
+_:node1d1igpls1x162 <http://www.w3.org/ns/r2rml#template> "http://identifiers.org/hco/{CHROMOSOME}/{ASSEMBLY_VERSION}" .
 _:node1d1igpls1x161 <http://www.w3.org/ns/r2rml#objectMap> _:node1d1igpls1x162 .
 <unknown:namespace#EndPosition> <http://www.w3.org/ns/r2rml#predicateObjectMap> _:node1d1igpls1x161 .
 _:node1d1igpls1x163 <http://www.w3.org/ns/r2rml#predicate> <http://biohackathon.org/resource/faldo#position> .
