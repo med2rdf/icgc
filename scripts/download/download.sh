@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR_INPUT=../../input
-release="release_27"
+release="release_28"
 
 if [ -d $DIR_INPUT/$1 ]; then
 
