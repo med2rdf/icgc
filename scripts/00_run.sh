@@ -8,7 +8,7 @@ echo "Creating tables .."
 echo "******************"
 
 cd $SCRIPT_HOME/table
-sqlplus icgc_user/oracle@orclpdb1 @00_run.sql
+sqlplus icgc_user/oracle@xepdb1 @00_run.sql
 
 echo ""
 echo "************************************"
@@ -51,7 +51,7 @@ while read line; do
       echo "****************************"
 
       cd $SCRIPT_HOME/../output
-      sqlplus icgc_user/oracle@orclpdb1 @$SCRIPT_HOME/r2rml/05_spool.sql > /dev/null
+      sqlplus icgc_user/oracle@xepdb1 @$SCRIPT_HOME/r2rml/05_spool.sql > /dev/null
       mv export.nt $PROJECT_CODE.nt && gzip $PROJECT_CODE.nt
     #fi
   fi

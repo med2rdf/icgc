@@ -71,6 +71,21 @@
     rr:objectMap [ rr:column "MUTATION_ID" ] ;
   ] .
 
+<#Project>
+  rr:logicalTable [ rr:tableName "GENE" ] ; 
+  rr:subjectMap [ 
+    rr:template "http://icgc.link/Gene/{GENE_ID}" ; 
+    rr:class icgc:Project ; 
+  ] ;
+  rr:predicateObjectMap [ 
+    rr:predicate dct:identifier ; 
+    rr:objectMap [ rr:column "GENE_ID" ] ;
+  ] ;
+  rr:predicateObjectMap [ 
+    rr:predicate rdfs:label ; 
+    rr:objectMap [ rr:column "GENE_ID" ] ;
+  ] .
+
 ##################################################
 # OBJECT PROPERTIES
 ##################################################
