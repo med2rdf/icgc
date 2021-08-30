@@ -8,7 +8,7 @@ The aim of this repository is to generate a RDF dataset from the table-format da
 ### Get scripts
 
 * Ubuntu 18.04
-* >4GB memory capacity is recommended (In AWS, t2.medium has 4GB memory)
+* 4GB or more memory capacity is recommended (In AWS, t2.medium has 4GB memory)
 * For locating the all RDF datasets along with the original datasets, 250GB disk space is required
 
 ### Get scripts
