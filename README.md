@@ -59,7 +59,7 @@ Once you got the message below, you can quit with Ctl+C.
     DATABASE IS READY TO USE!
     #########################
 
-### Install Oracle Database
+### Configure Oracle Database
 
 Start the conteiner.
 
