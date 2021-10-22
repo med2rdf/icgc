@@ -106,6 +106,26 @@ For all datasets.
       sh /host-home/icgc/scripts/00_run.sh download/projects.tsv \
       > ~/icgc/log/main.log
 
+## How to test RDF data
+
+Run Virtuoso.
+
+    $ docker run \
+      --name virtuoso_docker_test \
+      --env DBA_PASSWORD=dba \
+      --publish 1111:1111 \
+      --publish 8890:8890 \
+      --volume `pwd`:/database \
+      --env VIRT_Parameters_NumberOfBuffers=680000 \
+      --env VIRT_Parameters_MaxDirtyBuffers=500000 \
+      --env VIRT_Parameters_DirsAllowed="., ../vad, /usr/share/proj, /database" \
+      openlink/virtuoso-opensource-7:latest
+
+Run a test.
+
+    $ cd scripts/
+    $ bash test.sh download/projects.tsv
+
 ## Ontologies
 
 Ontologies referenced
